@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 
 const User = require("./User.model");
 
-const connection = "mongodb://root:#Test345@mongo:27017/mongo-test";
+mongoose.Promise = global.Promise;
+
+
+const connection = "mongodb://root:#Test345@localhost:27017/mongo-test";
 
 const connectDb = () => {
   return mongoose.connect(connection,{ useNewUrlParser: true });
