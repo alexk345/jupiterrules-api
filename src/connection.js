@@ -11,7 +11,8 @@ const connection = "mongodb://srv-captain--mongo:27017/mongo-test";
 var options = {
   //user: "root",
   //pass: "#Test345",
-  useNewUrlParser: true 
+  useNewUrlParser: true,
+  keepAlive:true 
   };
   
   
