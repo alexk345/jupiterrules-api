@@ -26,7 +26,7 @@ const connectDb = () => {
   });
 
 
-  db.once('open', function() {
+  db.connection.once('open', function() {
     console.log('db connected')
   });
 
