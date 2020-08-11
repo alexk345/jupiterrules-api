@@ -8,21 +8,31 @@ mongoose.Promise = global.Promise;
 const connection = "mongodb://srv-captain--mongo:27017/mongo-test";
 
 
-var options = {
-  //user: "root",
-  //pass: "#Test345",
-  useNewUrlParser: true,
-  keepAlive:true 
+
+  
+
+// Connecting to the database
+const connect = async function () {
+  var options = {
+    //user: "root",
+    //pass: "#Test345",
+    useNewUrlParser: true,
+    keepAlive:true 
   };
-  
-  
 
-const connectDb = () => {
-  return mongoose.connect(connection,options)
-  .then(() => console.log('<br><br>Connected to MongoDB ...'))
-  .catch(err => console.error('<br><br>Could not connect to MongoDB:‌', err));
+  const uri = connection; // Will return DB URI 
+  console.log(`Connecting to DB - uri: ${uri}`);
+  return mongoose.connect(uri, options);
+};
 
 
+(async () => {
+  try {
+   const connected = await connect();
+  } catch(e) {
+   console.log('Error happend while connecting to the DB: ', e.message)
+  }
+})();
 
 };
 
