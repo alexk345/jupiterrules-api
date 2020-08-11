@@ -25,16 +25,15 @@ const connect = async function () {
   return mongoose.connect(uri, options);
 };
 
-const connectDb ;
-
 (async () => {
   try {
-    connectDb = await connect();
+    const connectDb = await connect();
+    module.exports = connectDb;
   } catch(e) {
    console.log('Error happend while connecting to the DB: ', e.message)
   }
 })();
 
 
-module.exports = connectDb;
+
  
