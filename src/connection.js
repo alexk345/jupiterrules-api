@@ -15,7 +15,7 @@ const connectDb = () => {
     console.log(db)
     console.log("=========================")
     console.log("=========Connected===============")
-    console.log("connected 1 "+db.readyState);
+    console.log("connected 1 "+db);
     console.log("=========================")
   })
   .catch(function (err) {
