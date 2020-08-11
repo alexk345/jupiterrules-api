@@ -34,7 +34,6 @@ const connect = async function () {
   }
 })();
 
-};
 
 module.exports = connectDb;
  
