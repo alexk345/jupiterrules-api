@@ -28,10 +28,7 @@ let mongoConnectionLocal = {
   user: process.env.MongoDBLocalUser,
   pass: process.env.MongoDBLocalPassword,
   }
-  let mongoConnectionLocal = {
-  'url': `mongodb://srv-captain--mongo:27017/mongo-test`
-  };
-
+ 
   const connectDb = mongoose.connect(mongoConnectionOnline.url, options, err => { if(err) { console.log(err); }});
   
 
