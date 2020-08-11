@@ -11,8 +11,9 @@ const connectDb = () => {
   return mongoose.connect(connection,{ useNewUrlParser: true });	  
 };
 
-connectDb.on('error', console.error.bind(console, 'connection error:'));
-connectDb.once('open', function() {
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
   console.log('connected')
 });
 
