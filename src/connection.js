@@ -25,7 +25,7 @@ const connectDb = () => {
 
   
 
-return mongoose.createConnection(connection, {
+return mongoose.connect(connection, {
    useNewUrlParser: true
 }, (e) => {
 
