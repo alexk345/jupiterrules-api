@@ -10,7 +10,7 @@ const connection = "mongodb://srv-captain--mongo:27017/demotest";
 
 
 const connectDb = () => {
-  return mongoose.connect(connection,{ useNewUrlParser: true})	  
+  var db = mongoose.connect(connection,{ useNewUrlParser: true})	  
   .then(function (db) { // <- db as first argument
     console.log(db)
     console.log("=========================")
@@ -24,10 +24,16 @@ const connectDb = () => {
     console.log(err)
     console.log("=========================")
   });
+
+
+  db.connectDb.once('open', function() {
+    console.log('db connected')
+  });
+
+  return db;
+
 }
 
-connectDb.once('open', function() {
-  console.log('db connected')
-});
+
 
 module.exports = connectDb;
