@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const User = require("./User.model");
 
-mongoose.Promise = global.Promise;
+//mongoose.Promise = global.Promise;
 
  
 const connection = "mongodb://srv-captain--mongo:27017/mongo-test";
