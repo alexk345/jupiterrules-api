@@ -4,7 +4,7 @@ const User = require("./User.model");
 
 mongoose.Promise = global.Promise;
  
- 
+ /*
 const connection = "mongodb://root:Test345@srv-captain--mongo:27017/mongo-test";	
 
 const connectDb = () => {	
@@ -16,11 +16,10 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('connected')
 });
-
-/*
+*/
 
 let mongoConnectionLocal = {
-  'url':`mongodb://root:Test345#srv-captain--mongo:27017/mongo-test";	`
+  'url':`mongodb://root:Test345#srv-captain--mongo:27017/mongo-test";`
   };
   mongoose.connect(mongoConnectionLocal.url, {auth:{authdb:"admin"}}, err => { if(err) { console.log(err); }});
   
@@ -34,7 +33,7 @@ let mongoConnectionLocal = {
   };
 
   const connectDb = mongoose.connect(mongoConnectionOnline.url, options, err => { if(err) { console.log(err); }});
-  */
+  
 
 
 module.exports = connectDb;
