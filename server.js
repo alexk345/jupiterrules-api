@@ -2,15 +2,15 @@ const express = require('express');
 const app = express();
 const connectDb = require('./src/connection');
 const User = require('./src/User.model');
-const cors = require('cors');
+//const cors = require('cors');
 
-app.use(cors());
+//app.use(cors());
 
 const PORT = 8080;
 
 app.get("/users", async (req, res) => {
   console.log("request recieved /users1");
-  const users =  User.find();
+  const users = await User.find();
   console.log("request recieved /users2");
   res.json(users);
 });
@@ -18,7 +18,7 @@ app.get("/users", async (req, res) => {
 app.get("/user-create", async (req, res) => {
   const user = new User({ username: "userTest" });
 
-   user.save().then(() => console.log("User created"));
+  await user.save().then(() => console.log("User created"));
 
   res.send("User created \n");
 });
