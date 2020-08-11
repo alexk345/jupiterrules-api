@@ -9,7 +9,8 @@ const connection = "mongodb://root:Test345@srv-captain--mongo:27017/demotest&w=1
 
 
 
-const connectDb=mongoose.connect(connection,{ useNewUrlParser: true,auth:{authdb:"admin"} })	  
+const connectDb = () => {
+  return mongoose.connect(connection,{ useNewUrlParser: true,auth:{authdb:"admin"} })	  
   .then(function (db) { // <- db as first argument
     console.log(db)
     console.log("=========================")
@@ -17,7 +18,6 @@ const connectDb=mongoose.connect(connection,{ useNewUrlParser: true,auth:{authdb
     console.log("=========================")
   })
   .catch(function (err) {});
-
+}
 
 module.exports = connectDb;
-
