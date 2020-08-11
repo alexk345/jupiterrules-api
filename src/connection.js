@@ -7,8 +7,17 @@ mongoose.Promise = global.Promise;
  
 const connection = "mongodb://srv-captain--mongo:27017/mongo-test";
 
+
+var options = {
+  user: "root",
+  pass: "#Test345",
+  useNewUrlParser: true 
+  };
+  
+  
+
 const connectDb = () => {
-  return mongoose.connect(connection,{ useNewUrlParser: true });
+  return mongoose.connect(connection,options);
 };
 
 module.exports = connectDb;
