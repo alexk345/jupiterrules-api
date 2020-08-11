@@ -6,6 +6,7 @@ mongoose.Promise = global.Promise;
  
 const connection = "mongodb://srv-captain--mongo:27017/mongo-test";	
 
+/*
 const connectDb = () => {	
   return mongoose.connect(connection,{ useNewUrlParser: true });	  
 };
@@ -19,3 +20,11 @@ db.once('open', function() {
 
 
 module.exports = connectDb;
+*/
+
+
+var test = async function () {
+  return mongoose.connect(connection,{ useNewUrlParser: true });	  
+}
+
+module.exports = test;
