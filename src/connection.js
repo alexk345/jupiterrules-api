@@ -15,6 +15,7 @@ const connectDb = () => {
     console.log(db)
     console.log("=========================")
     console.log("=========Connected===============")
+    console.log(`connected ${db.readyState}`);
     console.log("=========================")
   })
   .catch(function (err) {
@@ -26,10 +27,7 @@ const connectDb = () => {
   });
 
 
-  db.connection.once('open', function() {
-    console.log('db connected')
-  });
-
+  
   return db;
 
 }
