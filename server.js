@@ -10,7 +10,7 @@ const PORT = 8080;
 
 app.get("/users", async (req, res) => {
   console.log("request recieved /users1");
-  const users = await User.find();
+  const users =  User.find();
   console.log("request recieved /users2");
   res.json(users);
 });
@@ -18,7 +18,7 @@ app.get("/users", async (req, res) => {
 app.get("/user-create", async (req, res) => {
   const user = new User({ username: "userTest" });
 
-  await user.save().then(() => console.log("User created"));
+   user.save().then(() => console.log("User created"));
 
   res.send("User created \n");
 });
