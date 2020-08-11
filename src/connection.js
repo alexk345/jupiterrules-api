@@ -29,6 +29,9 @@ const connect = async function () {
 (async () => {
   try {
    const connected = await connect();
+   
+  module.exports = connected;
+
   } catch(e) {
    console.log('Error happend while connecting to the DB: ', e.message)
   }
@@ -36,5 +39,4 @@ const connect = async function () {
 
 
 
-module.exports = connected;
  
