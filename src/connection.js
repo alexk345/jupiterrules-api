@@ -19,7 +19,7 @@ db.once('open', function() {
 */
 
 let mongoConnectionLocal = {
-  'url':`mongodb://root:Test345#srv-captain--mongo:27017/mongo-test";`
+  'url':`mongodb://srv-captain--mongo:27017/mongo-test";`
   };
   mongoose.connect(mongoConnectionLocal.url, {auth:{authdb:"admin"}}, err => { if(err) { console.log(err); }});
   
