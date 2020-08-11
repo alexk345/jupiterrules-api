@@ -9,8 +9,9 @@ app.use(cors());
 const PORT = 8080;
 
 app.get("/users", async (req, res) => {
+  console.log("request recieved /users1");
   const users = await User.find();
-  console.log("request recieved /users");
+  console.log("request recieved /users2");
   res.json(users);
 });
 
