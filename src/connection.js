@@ -23,9 +23,11 @@ const connectDb = () => {
     console.log("=========ERROR===============")
     console.log(err)
     console.log("=========================")
-
-
   });
 }
+
+connectDb.once('open', function() {
+  console.log('db connected')
+});
 
 module.exports = connectDb;
