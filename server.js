@@ -10,7 +10,23 @@ const PORT = 8080;
 
 app.get("/users", async (req, res) => {
   console.log("request recieved /users1");
-  const users = await User.find();
+  
+
+  try {
+    console.log("entering try block");
+    const users = await User.find();
+    console.log("this message is never seen");
+  }
+  catch (e) {
+    console.log("entering catch block");
+    console.log(e);
+    console.log("leaving catch block");
+  }
+  finally {
+    console.log("entering and leaving the finally block");
+  }
+
+
   console.log("request recieved /users2");
   res.json(users);
 });
