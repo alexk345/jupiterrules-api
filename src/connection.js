@@ -14,7 +14,7 @@ const connectDb = () => {
   .then(function (db) { // <- db as first argument
     console.log(db)
     console.log("=========================")
-    console.log("=========ERROR===============")
+    console.log("=========Connected===============")
     console.log("=========================")
   })
   .catch(function (err) {
