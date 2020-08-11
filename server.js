@@ -10,7 +10,7 @@ const PORT = 8080;
 
 app.get("/users", async (req, res) => {
   const users = await User.find();
-
+  console.log("request recieved /users");
   res.json(users);
 });
 
