@@ -17,7 +17,15 @@ const connectDb = () => {
     console.log("=========ERROR===============")
     console.log("=========================")
   })
-  .catch(function (err) {});
+  .catch(function (err) {
+
+    console.log("=========================")
+    console.log("=========ERROR===============")
+    console.log(err)
+    console.log("=========================")
+
+
+  });
 }
 
 module.exports = connectDb;
