@@ -12,7 +12,6 @@ const connection = "mongodb://root:Test345@srv-captain--mongo:27017/demotest";
 const connectDb = () => {
   var db = mongoose.connect(connection,{ useNewUrlParser: true})	  
   .then(function (db) { // <- db as first argument
-    console.log(db)
     console.log("=========================")
     console.log("=========Connected===============")
     console.log("=========================")
