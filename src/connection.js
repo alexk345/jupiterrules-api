@@ -4,7 +4,7 @@ const User = require("./User.model");
 
 mongoose.Promise = global.Promise;
  
-const connection = "mongodb://root:Test345@srv-captain--mongo:27017/admin&w=1";	
+const connection = "mongodb://root:Test345@srv-captain--mongo:27017/demotest";	
 
 
 
